@@ -1,0 +1,56 @@
+
+body {
+  height: 100%;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100px;
+  left: 0;
+  top: 0;
+  background: #444;
+}
+
+.menu-btn {
+  position: absolute;
+  background: #000;
+  top: 30px;
+  left: 30px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 35px;
+  z-index: 3;
+  cursor: pointer;
+
+  &:hover {
+    background: #444;
+    height: 47px;
+    width: 47px;
+
+    .btn-line-container {
+      .btn-line {
+        background: #000;
+      }
+    } 
+  }
+
+  .btn-line-container {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .btn-line {
+      background: #fff;     
+      width: 65%;
+      height: 11%;
+    }
+  }
+}
