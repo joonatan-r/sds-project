@@ -9,7 +9,14 @@ $secondary-color: rgb(75, 235, 250);
 body {
   height: 100%;
   width: 100%;
+  margin: 0;
   overflow: hidden;
+
+  /* &#bg-img {
+    background: url(../img/);
+    background-attachment: fixed;
+    background-size: cover;
+  } */
 }
 
 header {
@@ -162,4 +169,66 @@ main {
   width: 100%;
   position: fixed;
   left: 0;
+}
+
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (min-width: 501px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
+
+@include mediaSm {
+  header {
+    height: calc(100vh - 60px);
+  }
+
+  .menu {
+    height: 100%;
+    width: 50%;
+    
+    &-nav {
+      flex-direction: column;
+    }
+  }
+}
+
+@include mediaMd {
+  header {
+    height: calc(100vh - 60px);
+  }
+
+  .menu {
+    height: 100%;
+    width: 50%;
+    
+    &-nav {
+      flex-direction: column;
+    }
+  }
+}
+
+@include mediaLg {
+  
+}
+
+@include mediaXl {
+  
 }
