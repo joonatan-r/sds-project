@@ -19,6 +19,7 @@ function toggleMenu() {
     menuBtn.classList.remove('close');
     menu.classList.remove('show');
     menuNav.classList.remove('show');
+    // this is used to transition items before menu when closing
     menuNav.classList.add('close');
     navItems.forEach(item => item.classList.remove('show'));
   }

@@ -1,10 +1,5 @@
-
-$primary-color: #444;
-$secondary-color: rgb(75, 235, 250);
-
-@mixin easeOut {
-  transition: all 0.5s ease-out
-}
+@import 'config';
+@import 'menu';
 
 body {
   height: 100%;
@@ -28,207 +23,20 @@ header {
   height: 100px;
 }
 
-.menu {
-  height: 100px;
-  width: 100%;
-  visibility: hidden;
-  
-  &.show {
-    visibility: visible;
-  }
-
-  &-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    background: $primary-color;
-    list-style: none;
-    transform: translate3d(0, -100%, 0);
-    @include easeOut;
-
-    &.show {
-      transform: translate3d(0,0,0);
-    }
-
-    &.close {
-      transform: translate3d(0, -100%, 0);
-      transition-delay: 0.5s;
-    }
-  }
-
-  .nav-item {
-    transform: translate3d(-200vw, 0, 0);
-    @include easeOut;
-    
-    &.show {
-      transform: translate3d(0,0,0);
-    }
-    
-    &.current > a {
-      color: $secondary-color;
-      font-size: 22px;
-    }
-  }
-
-  .nav-link {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 20px;
-    color: #fff;
-    @include easeOut;
-
-    &:hover {
-      color: $secondary-color;
-    }
-  }
-}
-
-@for $i from 1 through 4 {
-  .nav-item:nth-child(#{$i}) {
-    transition-delay: 0.5s - $i / 10;
-  }
-}
-
 main {
-  min-height: calc(100vh - 60px); // footer
-  overflow: hidden;
-}
-
-.menu-btn {
-  position: absolute;
-  background: #000;
-  top: 30px;
-  left: 30px;
-  height: 50px;
-  width: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 35px;
-  z-index: 3;
-  cursor: pointer;
-  @include easeOut;
-
-  &:hover {
-    background: #fff;
-    height: 47px;
-    width: 47px;
-
-    .btn-line-container {
-      .btn-line {
-        background: $primary-color;
-      }
-    } 
-  }
-
-  .btn-line-container {
-    width: 100%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-
-    .btn-line {
-      background: #fff;     
-      width: 65%;
-      height: 11%;
-      @include easeOut;
-    }
-  }
-
-  &.close {
-    transform: rotate(180deg);
-
-    .btn-line {
-      &:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 0px) scale(0.6, 1);
-      }
-
-      &:nth-child(2) {
-        opacity: 0;
-      }
-
-      &:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, 0px) scale(0.6, 1);
-      }
-    }
-  }
+  min-height: calc(100vh - 60px); // space for footer
+  background-color: lighten($primary-color, 30);
 }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
   background: $primary-color;
-  color: #fff;
+  color: set-color($primary-color);
   height: 60px;
   width: 100%;
   position: fixed;
   left: 0;
 }
 
-@mixin mediaSm {
-  @media screen and (max-width: 500px) {
-    @content;
-  }
-}
-
-@mixin mediaMd {
-  @media screen and (min-width: 501px) and (max-width: 768px) {
-    @content;
-  }
-}
-
-@mixin mediaLg {
-  @media screen and (min-width: 769px) and (max-width: 1170px) {
-    @content;
-  }
-}
-
-@mixin mediaXl {
-  @media screen and (min-width: 1171px) {
-    @content;
-  }
-}
-
-@include mediaSm {
-  header {
-    height: calc(100vh - 60px);
-  }
-
-  .menu {
-    height: 100%;
-    width: 50%;
-    
-    &-nav {
-      flex-direction: column;
-    }
-  }
-}
-
-@include mediaMd {
-  header {
-    height: calc(100vh - 60px);
-  }
-
-  .menu {
-    height: 100%;
-    width: 50%;
-    
-    &-nav {
-      flex-direction: column;
-    }
-  }
-}
-
-@include mediaLg {
-  
-}
-
-@include mediaXl {
-  
-}
+@import 'mobile';

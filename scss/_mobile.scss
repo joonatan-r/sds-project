@@ -1,0 +1,46 @@
+
+@include mediaSm {
+  header {
+    height: calc(100vh - 60px);
+  }
+
+  .menu {
+    height: 100%;
+    width: fit-content;
+    
+    &-nav {
+      flex-direction: column;
+
+      .nav-item {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include mediaMd {
+  header {
+    height: calc(100vh - 60px);
+  }
+
+  .menu {
+    height: 100%;
+    width: fit-content;
+    
+    &-nav {
+      flex-direction: column;
+
+      .nav-item {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include mediaLg {
+  
+}
+
+@include mediaXl {
+  
+}
