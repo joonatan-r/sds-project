@@ -16,8 +16,6 @@
 
   &:hover {
     background: #fff;
-    height: 47px;
-    width: 47px;
 
     .btn-line-container {
       .btn-line {
@@ -106,7 +104,6 @@
     
     &.current > a {
       color: $secondary-color;
-      font-size: 22px;
     }
   }
 

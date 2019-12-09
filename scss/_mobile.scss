@@ -1,7 +1,7 @@
 
 @include mediaSm {
   header {
-    height: calc(100vh - 60px);
+    height: 100%;
   }
 
   .menu {
@@ -20,7 +20,7 @@
 
 @include mediaMd {
   header {
-    height: calc(100vh - 60px);
+    height: 100%;
   }
 
   .menu {

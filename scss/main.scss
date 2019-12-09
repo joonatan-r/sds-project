@@ -5,13 +5,7 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  overflow: hidden;
-
-  /* &#bg-img {
-    background: url(../img/);
-    background-attachment: fixed;
-    background-size: cover;
-  } */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -25,18 +19,43 @@ header {
 
 main {
   min-height: calc(100vh - 60px); // space for footer
-  background-color: lighten($primary-color, 30);
+  background-color: $bg-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  .main-header {
+    font-size: 5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: set-color($bg-color);
+    margin: 100px 0 0 0;
+  }
+
+  .text-container {
+    width: 100%;
+    text-align: center;
+    max-width: 700px;
+
+    p {
+      color: set-color($bg-color);
+      font-size: 1.5rem;
+      text-align: justify;
+      padding: 0 50px 50px 50px;
+    }
+  }
 }
 
 #main-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  padding: 1rem;
   background: $primary-color;
   color: set-color($primary-color);
   height: 60px;
   width: 100%;
-  position: fixed;
-  left: 0;
 }
 
 @import 'mobile';

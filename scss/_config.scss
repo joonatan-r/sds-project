@@ -1,6 +1,7 @@
 
-$primary-color: #444;
+$primary-color: #222;
 $secondary-color: rgb(75, 235, 250);
+$bg-color: lighten($primary-color, 50);
 
 @function set-color($color) {
   @if (lightness($color) > 40) {
