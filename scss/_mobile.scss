@@ -2,6 +2,7 @@
 @include mediaSm {
   header {
     height: 100%;
+    width: 0;
   }
 
   .menu {
@@ -13,6 +14,31 @@
 
       .nav-item {
         width: 100%;
+      }
+    }
+  }
+
+  .grid {
+    grid-template-areas: 
+    'img1'
+    'desc1'
+    'img2'
+    'desc2'
+    'img3'
+    'desc3';
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-row-gap: 2rem;
+  
+    .description {
+      border-left: none;
+      border-right: none;
+      border-bottom: solid 5px $secondary-color;
+      margin-top: -2rem;
+      padding-bottom: 2rem;
+
+      div {
+        padding-bottom: 0;
       }
     }
   }
@@ -21,6 +47,7 @@
 @include mediaMd {
   header {
     height: 100%;
+    width: 0;
   }
 
   .menu {
@@ -35,10 +62,59 @@
       }
     }
   }
+
+  .grid {
+    grid-template-areas: 
+    'img1'
+    'desc1'
+    'img2'
+    'desc2'
+    'img3'
+    'desc3';
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-row-gap: 2rem;
+  
+    .description {
+      border-left: none;
+      border-right: none;
+      border-bottom: solid 5px $secondary-color;
+      margin-top: -2rem;
+      padding-bottom: 2rem;
+
+      div {
+        padding-bottom: 0;
+      }
+    }
+  }
 }
 
 @include mediaLg {
   
+  .grid {
+    grid-template-areas: 
+    'img1'
+    'desc1'
+    'img2'
+    'desc2'
+    'img3'
+    'desc3';
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-row-gap: 2rem;
+  
+    .description {
+      border-left: none;
+      border-right: none;
+      border-bottom: solid 5px $secondary-color;
+      margin-top: -2rem;
+      padding-bottom: 2rem;
+
+      div {
+        padding-bottom: 0;
+      }
+    }
+  }
 }
 
 @include mediaXl {
