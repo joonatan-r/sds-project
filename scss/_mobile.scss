@@ -7,7 +7,8 @@
 
   .menu {
     height: 100%;
-    width: fit-content;
+    width: auto;
+    display: inline-block;
     
     &-nav {
       flex-direction: column;
@@ -34,6 +35,9 @@
       border-left: none;
       border-right: none;
       border-bottom: solid 5px $secondary-color;
+
+      // margin and padding to adjust rows so picture and its text are adjacent
+
       margin-top: -2rem;
       padding-bottom: 2rem;
 
@@ -52,7 +56,8 @@
 
   .menu {
     height: 100%;
-    width: fit-content;
+    width: auto;
+    display: inline-block;
     
     &-nav {
       flex-direction: column;
@@ -92,6 +97,7 @@
 @include mediaLg {
   
   .grid {
+    width: 65%;
     grid-template-areas: 
     'img1'
     'desc1'
