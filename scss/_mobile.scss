@@ -1,4 +1,40 @@
 
+@mixin small-grid {
+  max-width: 500px;
+  grid-template-areas: 
+  'img1'
+  'desc1'
+  'img2'
+  'desc2'
+  'img3'
+  'desc3';
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  grid-row-gap: 2rem;
+
+  .description {
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 5px $secondary-color;
+
+    // margin and padding to adjust rows so picture and its text are adjacent
+
+    margin-top: -2rem;
+    padding-bottom: 2rem;
+
+    div {
+      padding-bottom: 0;
+    }
+  }
+
+  .img-container {
+    /* grid aligns items to end. setting max height helps so that the image
+    doesn't get really tall and thin when the screen width is small */
+
+    max-height: 450px;
+  }
+}
+
 @include mediaSm {
   header {
     height: 100%;
@@ -20,31 +56,7 @@
   }
 
   .grid {
-    grid-template-areas: 
-    'img1'
-    'desc1'
-    'img2'
-    'desc2'
-    'img3'
-    'desc3';
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    grid-row-gap: 2rem;
-  
-    .description {
-      border-left: none;
-      border-right: none;
-      border-bottom: solid 5px $secondary-color;
-
-      // margin and padding to adjust rows so picture and its text are adjacent
-
-      margin-top: -2rem;
-      padding-bottom: 2rem;
-
-      div {
-        padding-bottom: 0;
-      }
-    }
+    @include small-grid;
   }
 }
 
@@ -69,57 +81,14 @@
   }
 
   .grid {
-    grid-template-areas: 
-    'img1'
-    'desc1'
-    'img2'
-    'desc2'
-    'img3'
-    'desc3';
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    grid-row-gap: 2rem;
-  
-    .description {
-      border-left: none;
-      border-right: none;
-      border-bottom: solid 5px $secondary-color;
-      margin-top: -2rem;
-      padding-bottom: 2rem;
-
-      div {
-        padding-bottom: 0;
-      }
-    }
+    @include small-grid;
   }
 }
 
 @include mediaLg {
   
   .grid {
-    width: 65%;
-    grid-template-areas: 
-    'img1'
-    'desc1'
-    'img2'
-    'desc2'
-    'img3'
-    'desc3';
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    grid-row-gap: 2rem;
-  
-    .description {
-      border-left: none;
-      border-right: none;
-      border-bottom: solid 5px $secondary-color;
-      margin-top: -2rem;
-      padding-bottom: 2rem;
-
-      div {
-        padding-bottom: 0;
-      }
-    }
+    @include small-grid;
   }
 }
 

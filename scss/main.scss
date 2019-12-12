@@ -55,6 +55,64 @@ main {
     justify-content: center;
   }
 
+  &#page3 {
+    justify-content: flex-start;
+
+    .img-list {
+      width: 60%;
+      padding: 150px 0 0 0;
+
+      .text-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 1.5rem 0 1.5rem 0;
+        padding: 1.5rem 0 1.5rem 0;
+        background: $primary-color;
+
+        div {
+          width: 90%;
+          color: set-color($primary-color);
+          text-align: justify;
+        }
+      }
+
+      .parallax-img {
+        height: 50vh;
+        width: 100%;
+      }
+
+      .img-1 {
+        background: url('../../dist/img/temp-img.jpg') no-repeat;
+        background-size: 100%;
+        background-position: left center;
+        background-attachment: fixed;
+      }
+
+      .img-2 {
+        background: url('../../dist/img/temp-img.jpg') no-repeat;
+        background-size: 100%;
+        background-position: left center;
+        background-attachment: fixed;
+      }
+
+      .img-3 {
+        background: url('../../dist/img/temp-img.jpg') no-repeat;
+        background-size: 100%;
+        background-position: left center;
+        background-attachment: fixed;
+      }
+
+      .img-4 {
+        background: url('../../dist/img/temp-img.jpg') no-repeat;
+        background-size: 100%;
+        background-position: left center;
+        background-attachment: fixed;
+      }
+    }
+  }
+
   &#info {
     justify-content: flex-start;
 
@@ -92,6 +150,7 @@ main {
   padding: 150px 0 50px 0;
   display: grid;
   width: 80%;
+  max-width: 1500px;
   grid-template-areas: 
   'img1 desc1'
   'desc2 img2'
@@ -132,7 +191,6 @@ main {
   .img-container {
     height: 100%;
     width: 100%;
-    max-height: 450px;
     background: rgba(0,0,0,0);
   }
 
@@ -140,21 +198,21 @@ main {
     grid-area: img1;
     background: url('../../dist/img/temp-img.jpg') no-repeat;
     background-size: cover;
-    background-position: center left;
+    background-position: left center;
   }
 
   .img-2 { 
     grid-area: img2;
     background: url('../../dist/img/temp-img.jpg') no-repeat;
     background-size: cover;
-    background-position: center left;
+    background-position: left center;
   }
 
   .img-3 { 
     grid-area: img3;
     background: url('../../dist/img/temp-img.jpg') no-repeat;
     background-size: cover;
-    background-position: center left;
+    background-position: left center;
   }
   
   .desc-1 { 

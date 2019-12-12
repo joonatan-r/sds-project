@@ -128,6 +128,46 @@ main {
         padding: 0 50px 50px 50px; }
   main#page2 {
     justify-content: center; }
+  main#page3 {
+    justify-content: flex-start; }
+    main#page3 .img-list {
+      width: 60%;
+      padding: 150px 0 0 0; }
+      main#page3 .img-list .text-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 1.5rem 0 1.5rem 0;
+        padding: 1.5rem 0 1.5rem 0;
+        background: #222; }
+        main#page3 .img-list .text-box div {
+          width: 90%;
+          color: #fff;
+          text-align: justify; }
+      main#page3 .img-list .parallax-img {
+        height: 50vh;
+        width: 100%; }
+      main#page3 .img-list .img-1 {
+        background: url("../../dist/img/temp-img.jpg") no-repeat;
+        background-size: 100%;
+        background-position: left center;
+        background-attachment: fixed; }
+      main#page3 .img-list .img-2 {
+        background: url("../../dist/img/temp-img.jpg") no-repeat;
+        background-size: 100%;
+        background-position: left center;
+        background-attachment: fixed; }
+      main#page3 .img-list .img-3 {
+        background: url("../../dist/img/temp-img.jpg") no-repeat;
+        background-size: 100%;
+        background-position: left center;
+        background-attachment: fixed; }
+      main#page3 .img-list .img-4 {
+        background: url("../../dist/img/temp-img.jpg") no-repeat;
+        background-size: 100%;
+        background-position: left center;
+        background-attachment: fixed; }
   main#info {
     justify-content: flex-start; }
     main#info .text-body {
@@ -153,6 +193,7 @@ main {
   padding: 150px 0 50px 0;
   display: grid;
   width: 80%;
+  max-width: 1500px;
   grid-template-areas: 'img1 desc1' 'desc2 img2' 'img3 desc3';
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -179,23 +220,22 @@ main {
   .grid .img-container {
     height: 100%;
     width: 100%;
-    max-height: 450px;
     background: rgba(0, 0, 0, 0); }
   .grid .img-1 {
     grid-area: img1;
     background: url("../../dist/img/temp-img.jpg") no-repeat;
     background-size: cover;
-    background-position: center left; }
+    background-position: left center; }
   .grid .img-2 {
     grid-area: img2;
     background: url("../../dist/img/temp-img.jpg") no-repeat;
     background-size: cover;
-    background-position: center left; }
+    background-position: left center; }
   .grid .img-3 {
     grid-area: img3;
     background: url("../../dist/img/temp-img.jpg") no-repeat;
     background-size: cover;
-    background-position: center left; }
+    background-position: left center; }
   .grid .desc-1 {
     grid-area: desc1;
     border-right: solid 5px #14c8dc; }
@@ -229,6 +269,7 @@ main {
       .menu-nav .nav-item {
         width: 100%; }
   .grid {
+    max-width: 500px;
     grid-template-areas: 'img1' 'desc1' 'img2' 'desc2' 'img3' 'desc3';
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
@@ -240,7 +281,11 @@ main {
       margin-top: -2rem;
       padding-bottom: 2rem; }
       .grid .description div {
-        padding-bottom: 0; } }
+        padding-bottom: 0; }
+    .grid .img-container {
+      /* grid aligns items to end. setting max height helps so that the image
+    doesn't get really tall and thin when the screen width is small */
+      max-height: 450px; } }
 
 @media screen and (min-width: 501px) and (max-width: 768px) {
   header {
@@ -255,6 +300,7 @@ main {
       .menu-nav .nav-item {
         width: 100%; }
   .grid {
+    max-width: 500px;
     grid-template-areas: 'img1' 'desc1' 'img2' 'desc2' 'img3' 'desc3';
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
@@ -266,11 +312,15 @@ main {
       margin-top: -2rem;
       padding-bottom: 2rem; }
       .grid .description div {
-        padding-bottom: 0; } }
+        padding-bottom: 0; }
+    .grid .img-container {
+      /* grid aligns items to end. setting max height helps so that the image
+    doesn't get really tall and thin when the screen width is small */
+      max-height: 450px; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .grid {
-    width: 65%;
+    max-width: 500px;
     grid-template-areas: 'img1' 'desc1' 'img2' 'desc2' 'img3' 'desc3';
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
@@ -282,4 +332,8 @@ main {
       margin-top: -2rem;
       padding-bottom: 2rem; }
       .grid .description div {
-        padding-bottom: 0; } }
+        padding-bottom: 0; }
+    .grid .img-container {
+      /* grid aligns items to end. setting max height helps so that the image
+    doesn't get really tall and thin when the screen width is small */
+      max-height: 450px; } }
