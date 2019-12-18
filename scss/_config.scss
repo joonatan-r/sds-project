@@ -32,9 +32,3 @@ $bg-color: lighten($primary-color, 50);
     @content;
   }
 }
-
-@mixin mediaXl {
-  @media screen and (min-width: 1171px) {
-    @content;
-  }
-}
