@@ -149,22 +149,22 @@ main {
         height: 50vh;
         width: 100%; }
       main#page3 .img-list .img-1 {
-        background: url("../../dist/img/budapest.jpg") no-repeat;
+        background: url("../img/budapest.jpg") no-repeat;
         background-size: 100%;
         background-position: left center;
         background-attachment: fixed; }
       main#page3 .img-list .img-2 {
-        background: url("../../dist/img/urban-landscape.jpg") no-repeat;
+        background: url("../img/urban-landscape.jpg") no-repeat;
         background-size: 100%;
         background-position: left center;
         background-attachment: fixed; }
       main#page3 .img-list .img-3 {
-        background: url("../../dist/img/taipei-taiwan.jpg") no-repeat;
+        background: url("../img/taipei-taiwan.jpg") no-repeat;
         background-size: 100%;
         background-position: left center;
         background-attachment: fixed; }
       main#page3 .img-list .img-4 {
-        background: url("../../dist/img/shanghai.jpg") no-repeat;
+        background: url("../img/shanghai.jpg") no-repeat;
         background-size: 100%;
         background-position: left center;
         background-attachment: fixed; }
@@ -223,17 +223,17 @@ main {
     background: rgba(0, 0, 0, 0); }
   .grid .img-1 {
     grid-area: img1;
-    background: url("../../dist/img/creek.jpg") no-repeat;
+    background: url("../img/creek.jpg") no-repeat;
     background-size: cover;
     background-position: left center; }
   .grid .img-2 {
     grid-area: img2;
-    background: url("../../dist/img/forest.jpg") no-repeat;
+    background: url("../img/forest.jpg") no-repeat;
     background-size: cover;
     background-position: left center; }
   .grid .img-3 {
     grid-area: img3;
-    background: url("../../dist/img/nature.jpg") no-repeat;
+    background: url("../img/nature.jpg") no-repeat;
     background-size: cover;
     background-position: left center; }
   .grid .desc-1 {
